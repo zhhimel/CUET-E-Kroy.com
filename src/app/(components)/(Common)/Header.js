@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 const Header = () => {
   return (
     <div>
@@ -7,16 +8,20 @@ const Header = () => {
           <div className="container-fluid">
             <div className="top_nav_container">
               <div className="contact_nav">
-                <a href="">
-                  <i className="fa fa-phone" aria-hidden="true"></i>
-                  <span>Call : +01 123455678990</span>
-                </a>
-                <a href="">
-                  <i className="fa fa-envelope" aria-hidden="true"></i>
-                  <span>Email : demo@gmail.com</span>
-                </a>
+                <Link href="#">
+                  <span>
+                    <i className="fa fa-phone" aria-hidden="true"></i>
+                    <span>Call : +8801910525410</span>
+                  </span>
+                </Link>
+                <Link href="#">
+                  <span>
+                    <i className="fa fa-envelope" aria-hidden="true"></i>
+                    <span>Email : u1904095@student.cuet.ac.bd</span>
+                  </span>
+                </Link>
               </div>
-              <from className="search_form">
+              <form className="search_form">
                 <input
                   type="text"
                   className="form-control"
@@ -25,16 +30,20 @@ const Header = () => {
                 <button className="" type="submit">
                   <i className="fa fa-search" aria-hidden="true"></i>
                 </button>
-              </from>
+              </form>
               <div className="user_option_box">
-                <a href="" className="account-link">
-                  <i className="fa fa-user" aria-hidden="true"></i>
-                  <span>My Account</span>
-                </a>
-                <a href="/signin" className="cart-link">
-                  <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-                  <span>Sign In</span>
-                </a>
+                <Link href="#">
+                  <span className="account-link">
+                    <i className="fa fa-user" aria-hidden="true"></i>
+                    <span>My Account</span>
+                  </span>
+                </Link>
+                <Link href="/signin">
+                  <span className="cart-link">
+                    <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span>Sign In</span>
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
@@ -42,9 +51,10 @@ const Header = () => {
         <div className="header_bottom">
           <div className="container-fluid">
             <nav className="navbar navbar-expand-lg custom_nav-container ">
-              <a className="navbar-brand" href="index.html">
-                <span>Minics</span>
-              </a>
+              <Link href="/" className="navbar-brand">
+                <span>CUET-E-Kroy.com</span>
+                
+              </Link>
 
               <button
                 className="navbar-toggler"
@@ -61,29 +71,31 @@ const Header = () => {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ">
                   <li className="nav-item active">
-                    <a className="nav-link" to="/">
-                      Home <span className="sr-only">(current)</span>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" href="/About">
-                      About
+                    <Link href="/">
+                      <span className="nav-link">
+                        Home <span className="sr-only">(current)</span>
+                      </span>
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/Product">
-                      Products
-                    </a>
+                    <Link href="/About">
+                      <span className="nav-link">About</span>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/Cart">
-                      Cart
-                    </a>
+                    <Link href="/Products">
+                      <span className="nav-link">Products</span>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="testimonial.html">
-                      Testimonial
-                    </a>
+                    <Link href="/Carts">
+                      <span className="nav-link">Cart</span>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link href="/Testimonial">
+                      <span className="nav-link">Testimonial</span>
+                    </Link>
                   </li>
                 </ul>
               </div>
