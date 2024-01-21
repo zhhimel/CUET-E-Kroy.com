@@ -1,31 +1,40 @@
-import Link from "next/link";
-const Products=()=>{
-    return(
+'use client'
+import React from 'react'
+import Dropdown from "react-bootstrap/Dropdown";
+import Link from 'next/link';
+const page = () => {
+  return (
+    <div>
       <section className="product_section layout_padding">
       <div className="container">
         <div className="heading_container heading_center">
-          <h2>
-            Our Products
-          </h2>
+          <h2>Old Products</h2>
         </div>
+        <Dropdown>
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Category
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            <Link href="/Products">New Products</Link>
+            <button>Foods</button>
+            <button>Accessories</button>
+          </Dropdown.Menu>
+        </Dropdown>
         <div className="row">
           <div className="col-sm-6 col-lg-4">
             <div className="box">
               <div className="img-box">
-                <img src="images/p1.png" alt="#"/>
-                <Link href="#" className="add_cart_btn">
-                  <span>
-                    Add To Cart
-                  </span>
-                </Link>
+                <img src="images/khata.jpg" alt="" />
+                <a href="" className="add_cart_btn">
+                  <span>Add To Cart</span>
+                </a>
               </div>
               <div className="detail-box">
-                <h5>
-                  Product Name
-                </h5>
+                <h5>Khata</h5>
                 <div className="product_info">
                   <h5>
-                    <span>$</span> 300
+                    <span>Tk.</span> 60
                   </h5>
                   <div className="star_container">
                     <i className="fa fa-star" aria-hidden="true"></i>
@@ -41,20 +50,16 @@ const Products=()=>{
           <div className="col-sm-6 col-lg-4">
             <div className="box">
               <div className="img-box">
-                <img src="images/p2.png" alt="#"/>
-                <Link href="#" className="add_cart_btn">
-                  <span>
-                    Add To Cart
-                  </span>
-                </Link>
+                <img src="images/pen.jpeg" alt="" />
+                <a href="" className="add_cart_btn">
+                  <span>Add To Cart</span>
+                </a>
               </div>
               <div className="detail-box">
-                <h5>
-                  Product Name
-                </h5>
+                <h5>Pen</h5>
                 <div className="product_info">
                   <h5>
-                    <span>$</span> 300
+                    <span>TK.</span> 10
                   </h5>
                   <div className="star_container">
                     <i className="fa fa-star" aria-hidden="true"></i>
@@ -70,20 +75,16 @@ const Products=()=>{
           <div className="col-sm-6 col-lg-4">
             <div className="box">
               <div className="img-box">
-                <img src="images/p3.png" alt="#"/>
-                <Link href="#" className="add_cart_btn">
-                  <span>
-                    Add To Cart
-                  </span>
-                </Link>
+                <img src="images/images.jpeg" alt="" />
+                <a href="" className="add_cart_btn">
+                  <span>Add To Cart</span>
+                </a>
               </div>
               <div className="detail-box">
-                <h5>
-                  Product Name
-                </h5>
+                <h5>Offset Paper(50 pieces)</h5>
                 <div className="product_info">
                   <h5>
-                    <span>$</span> 300
+                    <span>TK.</span> 50
                   </h5>
                   <div className="star_container">
                     <i className="fa fa-star" aria-hidden="true"></i>
@@ -99,20 +100,16 @@ const Products=()=>{
           <div className="col-sm-6 col-lg-4">
             <div className="box">
               <div className="img-box">
-                <img src="images/p4.png" alt="#"/>
-                <Link href="#" className="add_cart_btn">
-                  <span>
-                    Add To Cart
-                  </span>
-                </Link>
+                <img src="images/file.jpg" alt="" />
+                <a href="" className="add_cart_btn">
+                  <span>Add To Cart</span>
+                </a>
               </div>
               <div className="detail-box">
-                <h5>
-                  Product Name
-                </h5>
+                <h5>Document File</h5>
                 <div className="product_info">
                   <h5>
-                    <span>$</span> 300
+                    <span>TK.</span> 15
                   </h5>
                   <div className="star_container">
                     <i className="fa fa-star" aria-hidden="true"></i>
@@ -128,20 +125,16 @@ const Products=()=>{
           <div className="col-sm-6 col-lg-4">
             <div className="box">
               <div className="img-box">
-                <img src="images/p5.png" alt="#"/>
-                <Link href="#" className="add_cart_btn">
-                  <span>
-                    Add To Cart
-                  </span>
-                </Link>
+                <img src="images/ruller.jpg" alt="" />
+                <a href="" className="add_cart_btn">
+                  <span>Add To Cart</span>
+                </a>
               </div>
               <div className="detail-box">
-                <h5>
-                  Product Name
-                </h5>
+                <h5>Ruller</h5>
                 <div className="product_info">
                   <h5>
-                    <span>$</span> 300
+                    <span>TK.</span>20
                   </h5>
                   <div className="star_container">
                     <i className="fa fa-star" aria-hidden="true"></i>
@@ -157,20 +150,16 @@ const Products=()=>{
           <div className="col-sm-6 col-lg-4">
             <div className="box">
               <div className="img-box">
-                <img src="images/p6.png" alt="#"/>
-                <Link href="#" className="add_cart_btn">
-                  <span>
-                    Add To Cart
-                  </span>
-                </Link>
+                <img src="images/eraser.jpeg" alt="" />
+                <a href="" className="add_cart_btn">
+                  <span>Add To Cart</span>
+                </a>
               </div>
               <div className="detail-box">
-                <h5>
-                  Product Name
-                </h5>
+                <h5>Eraser</h5>
                 <div className="product_info">
                   <h5>
-                    <span>$</span> 300
+                    <span>TK.</span> 10
                   </h5>
                   <div className="star_container">
                     <i className="fa fa-star" aria-hidden="true"></i>
@@ -186,20 +175,16 @@ const Products=()=>{
           <div className="col-sm-6 col-lg-4">
             <div className="box">
               <div className="img-box">
-                <img src="images/p7.png" alt="#"/>
-                <Link href="#" className="add_cart_btn">
-                  <span>
-                    Add To Cart
-                  </span>
-                </Link>
+                <img src="images/pencil.jpg" alt="" />
+                <a href="" className="add_cart_btn">
+                  <span>Add To Cart</span>
+                </a>
               </div>
               <div className="detail-box">
-                <h5>
-                  Product Name
-                </h5>
+                <h5>Pencil</h5>
                 <div className="product_info">
                   <h5>
-                    <span>$</span> 300
+                    <span>TK.</span> 10
                   </h5>
                   <div className="star_container">
                     <i className="fa fa-star" aria-hidden="true"></i>
@@ -215,20 +200,16 @@ const Products=()=>{
           <div className="col-sm-6 col-lg-4">
             <div className="box">
               <div className="img-box">
-                <img src="images/p8.png" alt="#"/>
-                <Link href="#" className="add_cart_btn">
-                  <span>
-                    Add To Cart
-                  </span>
-                </Link>
+                <img src="images/bread.jpg" alt="" />
+                <a href="" className="add_cart_btn">
+                  <span>Add To Cart</span>
+                </a>
               </div>
               <div className="detail-box">
-                <h5>
-                  Product Name
-                </h5>
+                <h5>Bread</h5>
                 <div className="product_info">
                   <h5>
-                    <span>$</span> 300
+                    <span>TK</span> 30
                   </h5>
                   <div className="star_container">
                     <i className="fa fa-star" aria-hidden="true"></i>
@@ -244,20 +225,16 @@ const Products=()=>{
           <div className="col-sm-6 col-lg-4">
             <div className="box">
               <div className="img-box">
-                <img src="images/p9.png" alt="#"/>
-                <Link href="#" className="add_cart_btn">
-                  <span>
-                    Add To Cart
-                  </span>
-                </Link>
+                <img src="images/soap.jpg" alt="" />
+                <a href="" className="add_cart_btn">
+                  <span>Add To Cart</span>
+                </a>
               </div>
               <div className="detail-box">
-                <h5>
-                  Product Name
-                </h5>
+                <h5>Soap</h5>
                 <div className="product_info">
                   <h5>
-                    <span>$</span> 300
+                    <span>TK.</span> 45
                   </h5>
                   <div className="star_container">
                     <i className="fa fa-star" aria-hidden="true"></i>
@@ -272,16 +249,14 @@ const Products=()=>{
           </div>
         </div>
         <div className="btn_box">
-          <Link href="#" className="view_more-link">
+          <a href="" className="view_more-link">
             View More
-          </Link>
+          </a>
         </div>
       </div>
     </section>
-  
-    )
-
-  
-
+    </div>
+  )
 }
-export default Products ;
+
+export default page

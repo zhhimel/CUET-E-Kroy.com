@@ -1,24 +1,24 @@
+"use client";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const [loggedIn,setLoggedin]=useState(false);
+  
+  console.log(loggedIn);
+  useEffect(()=>{
+    setLoggedin( localStorage.getItem("loggedIn")); 
+  },[])
   return (
     <div>
+
       <header className="header_section">
         <div className="header_top">
           <div className="container-fluid">
             <div className="top_nav_container">
               <div className="contact_nav">
                 <Link href="#">
-                  <span>
-                    <i className="fa fa-phone" aria-hidden="true"></i>
-                    <span>Call : +8801910525410</span>
-                  </span>
-                </Link>
-                <Link href="#">
-                  <span>
-                    <i className="fa fa-envelope" aria-hidden="true"></i>
-                    <span>Email : u1904095@student.cuet.ac.bd</span>
-                  </span>
+                  <span>Contact Us</span>
                 </Link>
               </div>
               <form className="search_form">
@@ -38,12 +38,29 @@ const Header = () => {
                     <span>My Account</span>
                   </span>
                 </Link>
-                <Link href="/signin">
-                  <span className="cart-link">
-                    <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <span>Sign In</span>
-                  </span>
-                </Link>
+                {loggedIn? (
+                  <Link href="/signin">
+                    <span className="cart-link">
+                      <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                      <span
+                        onClick={(e) => {
+                          setLoggedin(false);
+                          localStorage.setItem("loggedIn", false);
+                          
+                        }}
+                      >
+                        Sign Out
+                      </span>
+                    </span>
+                  </Link>
+                ) : (
+                  <Link href="/signin">
+                    <span className="cart-link">
+                      <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                      <span>Sign IN</span>
+                    </span>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -53,7 +70,6 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg custom_nav-container ">
               <Link href="/" className="navbar-brand">
                 <span>CUET-E-Kroy.com</span>
-                
               </Link>
 
               <button
@@ -68,7 +84,10 @@ const Header = () => {
                 <span className=""> </span>
               </button>
 
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <div
+                className="collapse navbar-collapse"
+                id="navbarSupportedContent"
+              >
                 <ul className="navbar-nav ">
                   <li className="nav-item active">
                     <Link href="/">
